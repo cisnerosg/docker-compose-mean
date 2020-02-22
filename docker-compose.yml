@@ -1,0 +1,16 @@
+# Vamos a definir los servicios y contenedores a usar
+version: '3'
+services:
+ # Preparamos el cliente
+  angular:
+    image: angular-cli:v1 
+    ports:
+      - "4200:4200"
+  servidor:
+    image: server:v1
+    ports:
+      - "3000:3000"
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
